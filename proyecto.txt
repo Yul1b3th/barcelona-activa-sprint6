@@ -1,0 +1,41 @@
+src
+|-- app
+|   |-- budgets-list
+|   |   |-- budgets-list.component.html
+|   |   |-- budgets-list.component.scss
+|   |   |-- budgets-list.component.ts
+|   |-- home
+|   |   |-- home.component.html
+|   |   |-- home.component.scss
+|   |   |-- home.component.ts
+|   |-- models
+|   |   |-- budget.model.ts
+|   |-- panel
+|   |   |-- panel.component.html
+|   |   |-- panel.component.ts
+|   |   |-- panel.component.scss
+|   |-- services
+|   |   |-- budget.service.spec.ts
+|   |   |-- budget.service.ts
+|   |   |-- modal.service.ts
+|   |-- shared
+|   |   |-- modal
+|   |   |   |-- modal.component.html
+|   |   |   |-- modal.component.ts
+|   |   |   |-- modal.component.scss
+|   |   |-- validations.ts
+|   |   |-- welcome
+|   |   |   |-- welcome.component.html
+|   |   |   |-- welcome.component.scss
+|   |   |   |-- welcome.component.ts
+|   |-- app.component.html
+|   |-- app.component.ts
+|-- index.html
+|-- main.ts
+|-- styles.scss
+|-- assets
+|   |--libs
+|   |   |-- fonts
+|   |   |   |-- BeVietnamPro-BlackItalic.ttf
+|   |   |-- fonts.css
+
