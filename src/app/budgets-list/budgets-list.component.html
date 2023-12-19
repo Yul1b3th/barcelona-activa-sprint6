@@ -4,9 +4,9 @@
     <!-- Servicios -->
     <div class="card-services mx-auto">
       <!-- Servicio Seo -->
-      <div class="service-item shadow rounded-4 p-5" [class.service-item-selected]="isChecked('seoCampaign')">
+      <div class="service-item shadow rounded-4 p-3 p-md-5" [class.service-item-selected]="isChecked('seoCampaign')">
         <div class="service-info">
-          <div class="service-text pe-3">
+          <div class="service-text pe-md-3">
             <h2>Seo</h2>
             <p>Programació d'una web responsive completa</p>
           </div>
@@ -15,7 +15,7 @@
             300 <span class="euro">€</span>
           </div>
 
-          <div class="service-check form-check">
+          <div class="service-check form-check ms-3">
             <input type="checkbox" class="form-check-input" id="idSeoCampaign" formControlName="seoCampaign"
               [ngClass]="{'is-valid': isChecked('seoCampaign'),'is-invalid': showError}">
             <label class="form-check-label" for="idSeoCampaign">Afegir</label>
@@ -24,9 +24,9 @@
       </div>
 
       <!-- Servicio Ads -->
-      <div class="service-item shadow rounded-4 p-5" [class.service-item-selected]="isChecked('adsCampaign')">
+      <div class="service-item shadow rounded-4 p-3 p-md-5" [class.service-item-selected]="isChecked('adsCampaign')">
         <div class="service-info">
-          <div class="service-text pe-3">
+          <div class="service-text pe-md-3">
             <h2>Ads</h2>
             <p>Programació d'una web responsive completa</p>
           </div>
@@ -35,7 +35,7 @@
             400 <span class="euro">€</span>
           </div>
 
-          <div class="service-check form-check">
+          <div class="service-check form-check ms-3">
             <input type="checkbox" class="form-check-input" id="idAdsCampaign" formControlName="adsCampaign"
               [ngClass]="{'is-valid': isChecked('adsCampaign'),'is-invalid': showError}">
             <label class="form-check-label" for="idAdsCampaign">Afegir</label>
@@ -44,9 +44,9 @@
       </div>
 
       <!-- Servicio Web -->
-      <div class="service-item shadow rounded-4 p-5" [class.service-item-selected]="isChecked('webCampaign')">
+      <div class="service-item shadow rounded-4 p-3 p-md-5" [class.service-item-selected]="isChecked('webCampaign')">
         <div class="service-info">
-          <div class="service-text pe-3">
+          <div class="service-text pe-md-3">
             <h2>Web</h2>
             <p>Programació d'una web responsive completa</p>
           </div>
@@ -55,7 +55,7 @@
             500 <span class="euro">€</span>
           </div>
 
-          <div class="service-check form-check">
+          <div class="service-check form-check ms-3">
             <input type="checkbox" class="form-check-input" id="idWebCampaign" formControlName="webCampaign"
               [ngClass]="{'is-valid': isChecked('webCampaign'),'is-invalid': showError}">
             <label class="form-check-label" for="idWebCampaign">Afegir</label>
@@ -84,16 +84,17 @@
     </div>
 
     <!-- Datos del cliente -->
-    <div class="shadow rounded-4 py-5 px-3">
+    <div class="shadow rounded-4 p-3 py-md-5">
       <div class="fs-3 fw-bold mb-2">
         Demanar Pressupostos
       </div>
 
       <div class="row">
-        <div class="col-9">
+
+        <div class="col-12 col-lg-9">
           <div class="row">
             <!-- Nombre del cliente -->
-            <div class="col-4">
+            <div class="col-12 col-md-4 mb-3">
               <div class="form-floating">
                 <input type="text" class="form-control" id="clientName" placeholder="Nom" formControlName="clientName"
                   required
@@ -104,7 +105,7 @@
             </div>
 
             <!-- Teléfono -->
-            <div class="col-4">
+            <div class="col-12 col-md-4 mb-3">
               <div class="form-floating">
                 <input type="text" class="form-control" id="phone" placeholder="Telefono" formControlName="phone"
                   required [class.is-valid]="budgetForm.get('phone')?.valid && budgetForm.get('phone')?.touched"
@@ -114,7 +115,7 @@
             </div>
 
             <!-- Correo electrónico -->
-            <div class="col-4">
+            <div class="col-12 col-md-4 mb-3">
               <div class="form-floating">
                 <input type="email" class="form-control" id="email" placeholder="name@example.com"
                   formControlName="email" required
@@ -125,7 +126,8 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+
+        <div class="col-12 col-lg-3">
           <div>
             <button type="submit" class="btn btn-primary py-3">Sol·licitar pressupost</button>
           </div>
@@ -168,14 +170,14 @@
         Pressupostos en curs:
       </div>
 
-      <div class="d-flex position-relative mt-2 mb-4">
+      <div class="position-relative mt-2 mb-4">
         <div class="mx-auto" [class.active]="searchInputValue === 'focused'" id="searchContainer">
           <span id="searchIcon"><img src="../../assets/search.svg" alt="" width="30px"></span>
           <input formControlName="searchInput" id="searchInput" type="text" placeholder="Buscar por nombre..."
             (focus)="onSearchInputFocus()" (blur)="onSearchInputBlur()" (input)="searchBudgets()">
         </div>
 
-        <div class="position-absolute end-0">
+        <div class="sortBudgets end-0 top-0 d-flex justify-content-center align-items-center h-100 mt-3 mt-lg-0">
           <a type="button" class="btn" (click)="sortBudgetsDate()">Data <i
               [ngStyle]="{'width': '30px', 'display': 'inline-block'}" class="fas" [ngClass]="{'fa-solid fa-chevron-up': sortBy === 'date' && sortDirection === 'asc',
                 'fa-solid fa-chevron-down': sortBy === 'date' && sortDirection === 'desc'}"></i></a>
@@ -191,7 +193,8 @@
       <div class="card-services">
 
         @for(budget of filteredBudgets; track budget.clientName){
-        <div class="shadow rounded-4 py-5 px-3 d-flex justify-content-between">
+        <div
+          class="shadow rounded-4 p-3 py-md-5 px-3 d-flex justify-content-between flex-column flex-md-row gap-3 flex-md-wrap flex-lg-nowrap">
           <div class="">
             <p class="fs-4 fw-bold mb-1">{{ budget.clientName }}</p>
             <p class="mb-0">{{ budget.phone }}</p>
