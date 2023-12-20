@@ -8,7 +8,7 @@ Este repositorio contiene los recursos para la actividad del Sprint 6 de Barcelo
 
 ## Demo 🚀
 
-[Budget](https://yul1b3th.github.io/barcelona-activa-sprint6/dis/budget/browser)
+[Budget](https://yul1b3th.github.io/barcelona-activa-sprint6)
 
 ✨ ## Características
 
